@@ -6,7 +6,7 @@
 /*   By: aggarcia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 19:24:23 by aggarcia          #+#    #+#             */
-/*   Updated: 2019/10/23 19:35:30 by aggarcia         ###   ########.fr       */
+/*   Updated: 2019/10/23 23:15:53 by rarias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	max_val(int **map, int row, int col)
 	max_possible_square(map, aux_i, aux_j, max_value);
 }
 
-int		**ft_find_square(int **map, int row, int col)
+void	ft_find_square(int **map, int row, int col, char *symbols)
 {
 	int i;
 	int j;
@@ -88,5 +88,5 @@ int		**ft_find_square(int **map, int row, int col)
 		}
 	}
 	max_val(map, row, col);
-	return (map);
+	ft_printsol(map, symbols, row, col);
 }
